@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f2f5f9;
+}
+
+/* Container */
+.verify-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.verify-card {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Header */
+.card-header {
+  background: #060d25;
+  color: white;
+  text-align: center;
+  padding: 20px 15px 15px;
+}
+.card-header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.card-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-header p {
+  font-size: 13px;
+  color: #dfe6f0;
+  margin-top: 3px;
+}
+
+/* Certificate details */
+.card-body {
+  padding: 20px 25px;
+}
+.card-body h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1d3557;
+  margin-bottom: 15px;
+  border-left: 3px solid #2ecc71;
+  padding-left: 8px;
+}
+
+.detail-list {
+  list-style: none;
+}
+.detail-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.detail-list li:last-child {
+  border-bottom: none;
+}
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Status Banner */
+.status-banner {
+  background: #eafaf1;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #27ae60;
+  border-top: 1px solid #d3f0df;
+}
+
+/* Footer link */
+.verify-footer .design-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d3557;
+  background: #f2f5f9;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.verify-footer .design-link:hover {
+  background: #e0e6ed;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .card-body {
+    padding: 15px;
+  }
+  .detail-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .value {
+    margin-top: 3px;
+  }
+}
