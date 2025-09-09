@@ -1,69 +1,97 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Certificate System – BatoBuzz UI Design Challenge
 
-Currently, two official plugins are available:
+![BatoBuzz Logo](public/assets/img/logo.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A web application to generate, download, and verify digital certificates for the BatoBuzz UI Design Challenge. Built with React, TypeScript, Vite, and Firebase.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Certificate Generation:** Create and download personalized certificates as PDFs.
+- **QR Code Verification:** Each certificate includes a QR code for instant authenticity checks.
+- **Design Submission:** Participants can submit and view their design entries.
+- **Admin Dashboard:** View all participants and their ranks.
+- **Firebase Integration:** Secure data storage and real-time updates.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- **Frontend:** React 19, TypeScript, Vite
+- **PDF Generation:** jsPDF, html2canvas
+- **QR Codes:** qrcode
+- **Database:** Firebase Firestore
+- **Routing:** React Router DOM
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Nabincdy/certification.git
+cd certification
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧑‍💻 Usage
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Start Development Server:**
+  ```bash
+  npm run dev
+  ```
+- **Build for Production:**
+  ```bash
+  npm run build
+  ```
+- **Preview Production Build:**
+  ```bash
+  npm run preview
+  ```
+- **Lint Code:**
+  ```bash
+  npm run lint
+  ```
+
+---
+
+## 🔑 Firebase Setup
+
+Update your Firebase credentials in `src/config/firebase.js` if you fork or redeploy.
+
+---
+
+## 📄 Project Structure
+
+- `src/components/CertificatePDF.tsx` – Generate and download certificates as PDF.
+- `src/components/VerifiedUser.tsx` – Verify certificate authenticity via QR code.
+- `src/config/firebase.js` – Firebase configuration.
+- `public/assets/img/` – Logos and signature images.
+
+---
+
+## 🌐 Certificate Verification
+
+Each certificate includes a QR code. Scan it or visit:
+
 ```
+https://batobuzz.com/certificate/verify/{certificateId}
+```
+
+---
+
+## 🏆 About BatoBuzz UI Design Challenge
+
+A quarterly event to recognize and reward outstanding UI design talent. Winners receive digital certificates with secure verification.
+
+---
+
+## 📬 Contact
+
+- **Website:** [batobuzz.com](https://batobuzz.com)
+- **Email:** info@batobuzz.com
+
+---
